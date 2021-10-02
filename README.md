@@ -3,14 +3,13 @@
 
 The files in this repository were used to configure the network depicted below.
 
-![TODO: Update the path with the name of your diagram](Images/diagram_filename.png) Elk-Stack/ELk Diagram.png
+![image](Diagrams/Network.png)
 
-These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the _____ file may be used to install only certain pieces of it, such as Filebeat.
+These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the included YAML files may be used to install only certain pieces of it, such as Filebeat.
 
-  - _TODO: Enter the playbook file. ansible-playbook install-elk.yml_
 
 This document contains the following details:
-- Description of the Topologu
+- Description of the Topology
 - Access Policies
 - ELK Configuration
   - Beats in Use
@@ -22,9 +21,9 @@ This document contains the following details:
 
 The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the D*mn Vulnerable Web Application.
 
-Load balancing ensures that the application will be highly _____, in addition to restricting _____ to the network.
-- _TODO: What aspect of security do load balancers protect? What is the advantage of a jump box?_Load Balancers route or balance traffic across an environment which prevents DDoS attacks.
- _Advantage of a Jump Box is to be able to allow monitored access to an environment from a remote work station.
+Load balancing ensures that the application will be highly redundant, in addition to restricting unauthorized access to the network.
+  - Balancers route or balance traffic across an environment which prevents DDoS attacks.
+  - Advantage of a Jump Box is to be able to allow monitored access to an environment from a remote work station.
 
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the _____ and system _____.
 - _TODO: What does Filebeat watch for?_Monitors log files activities 
@@ -73,8 +72,8 @@ The playbook implements the following tasks:
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
-![TODO: Update the path with the name of your screenshot of docker ps output](Images/docker_ps_output.png)
-_![image](https://user-images.githubusercontent.com/91091473/134791173-65c58780-0fbd-4043-82fe-135ee0aa46e3.png)
+![image](Diagrams/Elk.png)
+
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
 - _TODO: List the IP addresses of the machines you are monitoring_0.0.0.0:5044->5044/tcp, 0.0.0.0:9200->9200/tcp, 0.0.0.0:5601->5601/tcp
@@ -98,3 +97,4 @@ _TODO: Answer the following questions to fill in the blanks:_
 
 _As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._ansible-playbook filebeat-playbook.yml
 
+![image](Diagrams/Lynis.png)
